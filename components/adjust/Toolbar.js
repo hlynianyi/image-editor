@@ -67,12 +67,10 @@ export default function Toolbar() {
       sharpness: formData.get("sharpness"),
       image: editor.getImage(),
     };
-    console.log("onAdjustSubmit data :>> ", data);
     try {
       const adjustedImage = await getAdjustedImg(data);
       const toBlob = URL.createObjectURL(adjustedImage);
       editor.setImage(toBlob);
-      console.log("toBlob :>> ", toBlob);
       editor.setActiveFilter(null);
     } catch (e) {
       console.error(e);

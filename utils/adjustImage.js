@@ -20,7 +20,6 @@ const adjustImage = (data) => {
       }, "image/jpeg");
     };
     img.onerror = reject;
-    // img.src = URL.createObjectURL(imageBlob);
   });
 };
 
